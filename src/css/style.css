@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  ul {
+    list-style: none;
+    word-wrap: break-word;
+  }
+
+/**
+ * Canvas
+ */
+
+ .whiteboard {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+  }
+  
+  .colors {
+    position: fixed;
+    bottom: 0;
+    width: auto;
+  }
+  
+  .color {
+    display: inline-block;
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+  }
+  
+  #toolbox {
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    display: flex;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%)
+  }
+  
+  .toolbox-group:last-child {
+    margin-right: 0;
+  }
+  
+  .pencil-sizes-container {
+    display: flex;
+  }
+  
+  .canvas-button {
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    border: 0;
+    background-color: rgb(218, 218, 218);
+    border-radius: 50%;
+    margin: 2px;
+    outline: none;
+  }
+
+  .canvas-button:hover {
+    transform: scale(1.09);
+    z-index: 1;
+  }
+  
+  .canvas-button::-moz-focus-inner {
+    border: 0;
+  }
+  
+  .color-button-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .color-button-row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .color-button {
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    border: 0;
+    border-radius: 50%;
+    margin: 2px;
+    outline: none;
+  }
+
+  .color-button:hover {
+    transform: scale(1.09);
+    z-index: 1;
+  }
+  
+  .color-button::-moz-focus-inner {
+    border: 0;
+  }
+  
+  .line-width-button + .line-width-button-content {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .line-width-button-content {
+    background-color: rgb(218, 218, 218);
+  }
+  
+  .line-width-button:checked + .line-width-button-content {
+    background-color: rgb(148, 171, 235);
+  }
+  
+  button:hover,
+  input[type="button"]:hover,
+  .line-width-button-content:hover,
+  #color-picker:hover {
+      background-color: rgb(148, 171, 235) !important;
+  }
+  
+  .custom-check-or-radio {
+    opacity: 0.0;
+    position: absolute;
+  }
+  
+  .dot {
+    background-color: black;
+    border-radius: 50%;
+  }

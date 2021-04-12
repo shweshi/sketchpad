@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="title" content="Drawing Pad - Online Drawing | Annotation Tool">
+<meta name="description" content="Drawing Pad is an easy and clean drawing tool.">
+<meta name="keywords"
+    content="Drawingpad,drawingpad,DRAWINGPAD,shashi,prakash,gautam,shweshi,Shashi Prakash Gautam,Shashi,Prakash,Gautam">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="English">
+<meta name="author" content="Shashi Prakash Gautam">
+
+<head>
+    <title>Drawing Pad - Online Drawing Tool</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/images/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="manifest" href="/images/site.webmanifest">
+    <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/images/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LYJTGTFS4J"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-LYJTGTFS4J');
+    </script>
+</head>
+
+<body>
+    <div>
+        <canvas class="whiteboard"></canvas>
+
+        <div id="toolbox" class="colors">
+            <div class="color-button-container toolbox-group">
+                <div class="color-button-row">
+                    <button class="color-button" style="background-color: #ffffff !Important"
+                        onclick="onColorUpdate('#ffffff')"></button>
+                    <button class="color-button" style="background-color: #c1c1c1 !Important"
+                        onclick="onColorUpdate('#c1c1c1')"></button>
+                    <button class="color-button" style="background-color: #ef130b !Important"
+                        onclick="onColorUpdate('#ef130b')"></button>
+                    <button class="color-button" style="background-color: #ff7100 !Important"
+                        onclick="onColorUpdate('#ff7100')"></button>
+                    <button class="color-button" style="background-color: #ffe400 !Important"
+                        onclick="onColorUpdate('#ffe400')"></button>
+                    <button class="color-button" style="background-color: #00cc00 !Important"
+                        onclick="onColorUpdate('#00cc00')"></button>
+                    <button class="color-button" style="background-color: #00b2ff !Important"
+                        onclick="onColorUpdate('#00b2ff')"></button>
+                    <button class="color-button" style="background-color: #231fd3 !Important"
+                        onclick="onColorUpdate('#231fd3')"></button>
+                    <button class="color-button" style="background-color: #a300ba !Important"
+                        onclick="onColorUpdate('#a300ba')"></button>
+                    <button class="color-button" style="background-color: #d37caa !Important"
+                        onclick="onColorUpdate('#d37caa')"></button>
+                    <button class="color-button" style="background-color: #a0522d !Important"
+                        onclick="onColorUpdate('#a0522d')"></button>
+                </div>
+                <div class="color-button-row">
+                    <button class="color-button" style="background-color: #000000 !Important"
+                        onclick="onColorUpdate('#000000')"></button>
+                    <button class="color-button" style="background-color: #4c4c4c !Important"
+                        onclick="onColorUpdate('#4c4c4c')"></button>
+                    <button class="color-button" style="background-color: #740b07 !Important"
+                        onclick="onColorUpdate('#740b07')"></button>
+                    <button class="color-button" style="background-color: #c23800 !Important"
+                        onclick="onColorUpdate('#c23800')"></button>
+                    <button class="color-button" style="background-color: #e8a200 !Important"
+                        onclick="onColorUpdate('#e8a200')"></button>
+                    <button class="color-button" style="background-color: #005510 !Important"
+                        onclick="onColorUpdate('#005510')"></button>
+                    <button class="color-button" style="background-color: #00569e !Important"
+                        onclick="onColorUpdate('#00569e')"></button>
+                    <button class="color-button" style="background-color: #0e0865 !Important"
+                        onclick="onColorUpdate('#0e0865')"></button>
+                    <button class="color-button" style="background-color: #550069 !Important"
+                        onclick="onColorUpdate('#550069')"></button>
+                    <button class="color-button" style="background-color: #a75574 !Important"
+                        onclick="onColorUpdate('#a75574')"></button>
+                    <button class="color-button" style="background-color: #63300d !Important"
+                        onclick="onColorUpdate('#63300d')"></button>
+                </div>
+            </div>
+            <button class="canvas-button toolbox-group" style="font-size: 2rem;" onclick="onClear()"
+                alt="Clear the canvas" title="Clear the canvas">🗑
+            </button>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+    window.onload = () => {
+        'use strict';
+
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker
+                .register('./sw.js');
+        }
+    }
+</script>
+
+</html>
