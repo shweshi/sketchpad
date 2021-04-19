@@ -1,6 +1,6 @@
 {
-  "name": "Drawingpad",
-  "short_name": "Drawingpad",
+  "name": "Sketchpad",
+  "short_name": "Sketchpad",
   "icons": [
     {
       "src": "images/android-icon-36x36.png",

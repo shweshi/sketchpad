@@ -1,9 +1,10 @@
-var cacheName = 'drawingpad';
+var cacheName = 'sketchpad-v1';
 var filesToCache = [
     '/',
     '/index.html',
     '/css/style.css',
-    '/js/main.js'
+    '/js/main.js',
+    '/images/'
 ];
 
 /* Start the service worker and cache all of the app's content */

@@ -1,4 +1,4 @@
-var canvas, context, colors, current, drawing = false;
+var canvas, context, colors, current, sketching = false;
 function init() {
     canvas = document.getElementsByClassName('whiteboard')[0];
     colors = document.getElementsByClassName('color');
@@ -35,25 +35,25 @@ function drawLine(x0, y0, x1, y1, color) {
 }
 
 function onMouseDown(e) {
-    drawing = true;
+    sketching = true;
     current.x = e.clientX || e.touches[0].clientX;
     current.y = e.clientY || e.touches[0].clientY;
 }
 
 function onMouseUp(e) {
-    if (!drawing) { return; }
-    drawing = false;
+    if (!sketching) { return; }
+    sketching = false;
     drawLine(current.x, current.y, e.clientX || e.touches[0].clientX, e.clientY || e.touches[0].clientY, current.color, true);
 }
 
 function onMouseMove(e) {
-    if (!drawing) { return; }
+    if (!sketching) { return; }
     drawLine(current.x, current.y, e.clientX || e.touches[0].clientX, e.clientY || e.touches[0].clientY, current.color, true);
     current.x = e.clientX || e.touches[0].clientX;
     current.y = e.clientY || e.touches[0].clientY;
 }
 
-function onDrawingEvent(data) {
+function onsketchingEvent(data) {
     var w = canvas.width;
     var h = canvas.height;
     drawLine(data.x0 * w, data.y0 * h, data.x1 * w, data.y1 * h, data.color);
@@ -97,14 +97,14 @@ init();
 function printConsoleArt() {
     const consoleStr = `
     
-        ██████  ██████   █████  ██     ██ ██ ███    ██  ██████  ██████   █████  ██████      
-        ██   ██ ██   ██ ██   ██ ██     ██ ██ ████   ██ ██       ██   ██ ██   ██ ██   ██     
-        ██   ██ ██████  ███████ ██  █  ██ ██ ██ ██  ██ ██   ███ ██████  ███████ ██   ██     
-        ██   ██ ██   ██ ██   ██ ██ ███ ██ ██ ██  ██ ██ ██    ██ ██      ██   ██ ██   ██     
-        ██████  ██   ██ ██   ██  ███ ███  ██ ██   ████  ██████  ██      ██   ██ ██████      
-                                                                                            
-        Github: https://github.com/shweshi/drawingpad
-        `
+    ███████ ██   ██ ███████ ████████  ██████ ██   ██ ██████   █████  ██████  
+    ██      ██  ██  ██         ██    ██      ██   ██ ██   ██ ██   ██ ██   ██ 
+    ███████ █████   █████      ██    ██      ███████ ██████  ███████ ██   ██ 
+         ██ ██  ██  ██         ██    ██      ██   ██ ██      ██   ██ ██   ██ 
+    ███████ ██   ██ ███████    ██     ██████ ██   ██ ██      ██   ██ ██████  
+                                                                             
+    Github: https://github.com/shweshi/sketchpad
+    `
     console.log(consoleStr);
 }
 

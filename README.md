@@ -1,6 +1,6 @@
-# drawingpad
+# sketchpad
 
-Drawing Pad is an easy and clean online drawing tool.
+Sketch Pad is an easy and clean online sketching tool.
 
 # Features
 
@@ -14,7 +14,7 @@ Drawing Pad is an easy and clean online drawing tool.
 - Theme can be customize as per your choice.
 
 ## Usages
-Use online here: https://drawingpad.shashi.dev
+Use online here: https://sketchpad.shashi.dev
 
 ## Tech
 * HTML, CSS, JavaScript
